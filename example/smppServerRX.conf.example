@@ -1,0 +1,23 @@
+group = smppServer
+smppServer-id = MessagePlusServerRX
+smppServer-port = 2345
+our-system-id = MessagePlus
+receiver-mode = true
+log-level = 0
+log-file = "/home/rxvallejoc/GWec/var/log/MessagePlusServerRX.log"
+source-addr-ton = 1
+source-addr-npi = 1
+#source-addr-auto
+dest-addr-ton = 1
+dest-addr-npi = 1
+timeout = 30
+
+
+group = mysql-connection
+id = mydlr
+host = localhost
+username = root
+password = mysql
+database = gateway
+# you can increase this upon a higher load
+max-connections = 10

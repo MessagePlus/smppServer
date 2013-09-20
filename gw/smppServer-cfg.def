@@ -1,0 +1,41 @@
+/* ==================================================================
+ * smppserver-cfg.def - Definicion de la configuracion de Grupos y Variables Definition of configuration groups and variables
+ *
+ * Rodrigo Vallejo desarrollo@mplus.ec
+ *
+ */
+
+SINGLE_GROUP(smppServer,
+	OCTSTR(smppServer-id)
+	OCTSTR(integrator-id)
+	OCTSTR(integrator-queue-id)
+	OCTSTR(smppServer-port)
+	OCTSTR(log-file)
+	OCTSTR(log-level)
+	OCTSTR(our-system-id)
+	OCTSTR(source-addr-ton)
+	OCTSTR(source-addr-npi)
+	OCTSTR(source-addr-auto)
+	OCTSTR(dest-addr-ton)
+	OCTSTR(dest-addr-npi)
+	OCTSTR(timeout)
+	OCTSTR(receiver-mode)
+	OCTSTR(transmitter-mode)
+	
+)
+
+MULTI_GROUP(client-route,
+    OCTSTR(client-id)
+    OCTSTR(smsc-id)
+    OCTSTR(shortcode)
+) 
+
+SINGLE_GROUP(mysql-connection,
+    OCTSTR(id)
+    OCTSTR(host)
+    OCTSTR(port)
+    OCTSTR(username)
+    OCTSTR(password)
+    OCTSTR(database)
+    OCTSTR(max-connections)
+)
