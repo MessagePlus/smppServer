@@ -6,7 +6,7 @@ FROM smppUser where systemId='%s' and password='%s' and systemType='%s' "
 #define SQL_INSERT_MT "INSERT INTO trafficMT (id,phoneNumber,shortNumber,receivedTime,deliveryTime,dispatchTime,deliveryCount,msgText,carrierMsgId,integratorMsgId,status,errCode,errText,serviceId,serviceName,carrierId,integratorId,integratorQueueId,connectionId) \
 VALUES(NULL,'%S','%S',now(),now(),'0000-00-00 00:00:00',%s,'%S',%s,'%S','%s',%d,'%S',%S,'%S',%S,%S,%S,'%S')"
 
-#define SQL_SELECT_MO "SELECT id,phoneNumber,shortNumber,receivedTime,deliveryTime,dispatchTime,deliveryCount,msgText,status,errCode,errText,serviceId,serviceName,carrierId,carrierQueueId,integratorId,integratorQueueId \
+#define SQL_SELECT_MO "SELECT id,phoneNumber,shortNumber,receivedTime,deliveryTime,dispatchTime,deliveryCount,msgText,status,errCode,errText,serviceId,serviceName,carrierId,integratorId,integratorQueueId \
 FROM trafficMO \
 WHERE status='QUEUED' \
 AND deliveryTime<=now() \
